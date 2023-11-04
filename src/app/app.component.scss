@@ -1,0 +1,12 @@
+// You can place global styles here, and they will apply to the entire app.
+
+:host {
+    display: block;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+router-outlet {
+    flex-grow: 1;
+}

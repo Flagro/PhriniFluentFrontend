@@ -1,0 +1,52 @@
+.site-header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 10px 0;
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 0 15px;
+    }
+
+    .logo-container {
+        .logo {
+            border-radius: 50%; // This will give you the circle crop effect.
+            width: 50px; // Adjust the size as needed.
+            height: 50px; // Adjust the size as needed.
+            object-fit: cover; // This will ensure the image covers the area and is not stretched.
+            object-position: center; // This centers the image within the cropped area.
+        }
+    }
+
+    .project-name {
+        font-size: 1.5rem; // Example size, adjust as needed.
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .navigation {
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px; // Adjust the space between the links as needed.
+
+            li {
+                a {
+                    text-decoration: none;
+                    font-size: 1rem; // Example size, adjust as needed.
+                    color: #333; // Example color, adjust as needed.
+
+                    &:hover {
+                        color: #007bff; // Example hover color, adjust as needed.
+                    }
+                }
+            }
+        }
+    }
+}

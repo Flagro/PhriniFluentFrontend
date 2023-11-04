@@ -1,6 +1,5 @@
 .site-header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
     background: #fff;
     padding: 10px 0;
 
@@ -13,20 +12,25 @@
         padding: 0 15px;
     }
 
-    .logo-container {
-        .logo {
-            border-radius: 50%; // This will give you the circle crop effect.
-            width: 50px; // Adjust the size as needed.
-            height: 50px; // Adjust the size as needed.
-            object-fit: cover; // This will ensure the image covers the area and is not stretched.
-            object-position: center; // This centers the image within the cropped area.
-        }
-    }
+    .logo-and-title {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
 
-    .project-name {
-        font-size: 1.5rem; // Example size, adjust as needed.
-        text-align: center;
-        font-weight: bold;
+        .logo {
+            border-radius: 50%; // Circle crop effect.
+            width: 80px; // Adjusted size for large screens.
+            height: 80px; // Adjusted size for large screens.
+            object-fit: cover;
+            object-position: center;
+            margin-right: 15px; // Space between logo and title.
+        }
+
+        .project-name {
+            font-size: 2rem; // Adjusted size for large screens.
+            color: #333; // Example color.
+            font-weight: bold;
+        }
     }
 
     .navigation {
@@ -34,19 +38,34 @@
             list-style: none;
             padding: 0;
             display: flex;
-            gap: 20px; // Adjust the space between the links as needed.
+            gap: 20px;
 
             li {
                 a {
                     text-decoration: none;
-                    font-size: 1rem; // Example size, adjust as needed.
-                    color: #333; // Example color, adjust as needed.
+                    font-size: 1.25rem; // Adjusted size for large screens.
+                    color: #333;
 
                     &:hover {
-                        color: #007bff; // Example hover color, adjust as needed.
+                        color: #007bff;
                     }
                 }
             }
+        }
+    }
+
+    // Media query for larger screens
+    @media (min-width: 1920px) {
+        .header-content {
+            max-width: 90vw;
+        }
+
+        .project-name {
+            font-size: 2.5vw; // Scales with the width of the viewport.
+        }
+
+        .navigation ul li a {
+            font-size: 1.25vw; // Scales with the width of the viewport.
         }
     }
 }

@@ -39,13 +39,14 @@
             padding: 0;
             display: flex;
             gap: 20px;
-
+    
             li {
                 a {
                     text-decoration: none;
                     font-size: 1.25rem; // Adjusted size for large screens.
                     color: #333;
-
+                    font-weight: bold; // Make the links bold.
+    
                     &:hover {
                         color: #007bff;
                     }

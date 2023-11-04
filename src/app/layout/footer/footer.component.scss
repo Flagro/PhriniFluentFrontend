@@ -14,10 +14,14 @@
         .contact-info {
             p {
                 margin: 0;
-                font-size: 0.9rem;
+                font-size: 1.25rem; // Increased for better readability on large screens.
                 a {
                     color: #007bff;
                     text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -25,7 +29,21 @@
         .language-selection {
             p {
                 margin: 0;
-                font-size: 0.9rem;
+                font-size: 1.25rem; // Increased for better readability on large screens.
+            }
+        }
+    }
+
+    // Media query for larger screens
+    @media (min-width: 1920px) {
+        .footer-content {
+            max-width: 90vw;
+            padding: 0 15px;
+
+            .contact-info, .language-selection {
+                p {
+                    font-size: 1vw; // Scales with the width of the viewport.
+                }
             }
         }
     }

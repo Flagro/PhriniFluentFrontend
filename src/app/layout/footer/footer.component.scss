@@ -2,49 +2,46 @@
     background: #f8f9fa;
     padding: 20px 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 
     .footer-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-        max-width: 1200px;
-        padding: 0 15px;
+        p {
+            margin: 0;
+            font-size: 1.25rem; // Increased base font size.
+            a {
+                color: #007bff;
+                text-decoration: none;
 
-        .contact-info {
-            p {
-                margin: 0;
-                font-size: 1.25rem; // Increased for better readability on large screens.
-                a {
-                    color: #007bff;
-                    text-decoration: none;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
+                &:hover {
+                    text-decoration: underline;
                 }
             }
-        }
 
-        .language-selection {
-            p {
-                margin: 0;
-                font-size: 1.25rem; // Increased for better readability on large screens.
+            // Adding a separator style for the links
+            a:not(:last-child)::after {
+                content: '|';
+                margin: 0 10px;
+                color: #666;
             }
+        }
+    }
+
+    .copyright {
+        margin-top: 10px;
+        p {
+            font-size: 1.25rem; // Increased base font size.
+            color: #666;
         }
     }
 
     // Media query for larger screens
     @media (min-width: 1920px) {
-        .footer-content {
-            max-width: 90vw;
-            padding: 0 15px;
+        .footer-content p {
+            font-size: 1vw; // Adjusted for better readability on large screens.
+        }
 
-            .contact-info, .language-selection {
-                p {
-                    font-size: 1vw; // Scales with the width of the viewport.
-                }
-            }
+        .copyright p {
+            font-size: 1vw; // Adjusted for better readability on large screens.
         }
     }
 }

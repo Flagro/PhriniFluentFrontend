@@ -1,0 +1,32 @@
+.site-footer {
+    background: #f8f9fa;
+    padding: 20px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 0 15px;
+
+        .contact-info {
+            p {
+                margin: 0;
+                font-size: 0.9rem;
+                a {
+                    color: #007bff;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .language-selection {
+            p {
+                margin: 0;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

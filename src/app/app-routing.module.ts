@@ -6,6 +6,7 @@ import { WordGroupsComponent } from './pages/word-groups/word-groups.component';
 import { QuizComponent } from './pages/quiz/quiz.component';
 import { AboutComponent } from './pages/about/about.component';
 import { UserSettingsComponent } from './pages/user-settings/user-settings.component';
+import { LogInComponent } from './pages/log-in/log-in.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -13,7 +14,7 @@ const routes: Routes = [
   { path: 'quiz', component: QuizComponent },
   { path: 'about', component: AboutComponent },
   { path: 'user-settings', component: UserSettingsComponent },
-  // ... other routes
+  { path: 'login', component: LogInComponent },
 ];
 
 @NgModule({

@@ -10,6 +10,7 @@ import { UserSettingsComponent } from './pages/user-settings/user-settings.compo
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './layout/footer/footer.component';
     AboutComponent,
     UserSettingsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

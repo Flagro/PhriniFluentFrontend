@@ -1,15 +1,20 @@
 <header class="site-header">
     <div class="header-content">
-        <a href="/" class="logo-and-title">
+        <a routerLink="/" class="logo-and-title">
             <img src="assets/logo.png" alt="Logo" class="logo">
             <div class="project-name">PHRINIFLUENT</div>
         </a>
         <nav class="navigation">
             <ul>
-                <li><a href="/word-groups">Words</a></li>
-                <li><a href="/about">About Us</a></li>
+                <li><a routerLink="/word-groups">Words</a></li>
+                <li><a routerLink="/about">About Us</a></li>
                 <!-- This link will change based on authentication state -->
-                <li><a href="/auth">Log In</a></li>
+                <li *ngIf="!isLoggedIn; else loggedInTemplate">
+                  <a routerLink="/login">Log In</a>
+                </li>
+                <ng-template #loggedInTemplate>
+                  <li><a routerLink="/user-settings">User Settings</a></li>
+                </ng-template>
             </ul>
         </nav>
     </div>

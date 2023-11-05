@@ -1,0 +1,63 @@
+.about-page {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+
+    h1 {
+        font-size: 4rem; // Match the Main page base size
+        margin-bottom: 20px;
+    }
+
+    p {
+        text-align: left;
+        line-height: 1.6;
+        font-size: 1.5rem; // Match the Main page base size
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: #007bff;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+
+        li {
+            padding: 5px 0;
+            font-size: 1.5rem; // Match the Main page base size for list items
+            a {
+                display: inline-block; // Ensures the underline only spans the text
+                padding: 2px 0; // Gives some space for the underline on hover
+            }
+        }
+    }
+
+    .about-image {
+        margin-top: 20px;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    // Media query for larger screens to match the Main page
+    @media (min-width: 1920px) {
+        h1 {
+            font-size: 3vw;
+        }
+
+        p, ul li {
+            font-size: 1.25vw;
+        }
+
+        .about-image img {
+            max-height: 60vh; // Adjust for large screens
+        }
+    }
+}

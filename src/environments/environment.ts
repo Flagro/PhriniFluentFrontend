@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiEndpoint: 'https://yourdomain.com/api/'
+    apiEndpoint: 'https://api.phrinifluent.com/'
 };

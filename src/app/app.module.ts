@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { MainComponent } from './pages/main/main.component';
 import { WordGroupsComponent } from './pages/word-groups/word-groups.component';
-import { QuizComponent } from './pages/quiz/quiz.component';
 import { AboutComponent } from './pages/about/about.component';
 import { UserSettingsComponent } from './pages/user-settings/user-settings.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +17,6 @@ import { LogInComponent } from './pages/log-in/log-in.component';
     AppComponent,
     MainComponent,
     WordGroupsComponent,
-    QuizComponent,
     AboutComponent,
     UserSettingsComponent,
     HeaderComponent,

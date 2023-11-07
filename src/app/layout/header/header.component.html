@@ -6,14 +6,14 @@
         </a>
         <nav class="navigation">
             <ul>
-                <li><a routerLink="/word-groups">Words</a></li>
+                <li><a routerLink="/groups">Words</a></li>
                 <li><a routerLink="/about">About Us</a></li>
                 <!-- This link will change based on authentication state -->
                 <li *ngIf="!isLoggedIn; else loggedInTemplate">
                   <a routerLink="/login">Log In</a>
                 </li>
                 <ng-template #loggedInTemplate>
-                  <li><a routerLink="/user-settings">User Settings</a></li>
+                  <li><a routerLink="/settings">Settings</a></li>
                 </ng-template>
             </ul>
         </nav>

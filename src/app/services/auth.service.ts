@@ -13,8 +13,8 @@ export interface AuthResponse {
 })
 export class AuthService {
 
-  private loginUrl = `${environment.apiEndpoint}/api/login`; // Use environment variable
-  private signupUrl = `${environment.apiEndpoint}/api/signup`; // Use environment variable
+  private loginUrl = `${environment.apiEndpoint}/login`; // Use environment variable
+  private signupUrl = `${environment.apiEndpoint}/signup`; // Use environment variable
 
   constructor(private http: HttpClient) {}
 

@@ -7,13 +7,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./private-group.component.scss']
 })
 export class PrivateGroupComponent {
-  groupId: string;
+  groupId!: string;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.groupId = params.get('groupId');
+      this.groupId = params.get('groupId')!;
       // Now you can use this.groupId to load the specific group data
     });
   }

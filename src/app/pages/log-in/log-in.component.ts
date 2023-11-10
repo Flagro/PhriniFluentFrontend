@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./log-in.component.scss']
 })
 export class LogInComponent {
-  username: string = '';
-  password: string = '';
+  username = '';
+  password = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 

@@ -8,12 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent {
-  name: string = '';
-  surname: string = '';
-  email: string = '';
-  username: string = '';
-  password: string = '';
-  confirmPassword: string = '';
+  name = '';
+  surname = '';
+  email = '';
+  username = '';
+  password = '';
+  confirmPassword = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 

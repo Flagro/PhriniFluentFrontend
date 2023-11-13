@@ -1,5 +1,7 @@
 # 🌐 PhriniFluent Frontend
 
+![PhriniFluent Logo](logo.png)
+
 🚀 Welcome to the *frontend repository* of **PhriniFluent** - the vibrant face of our open-source language learning platform. Here, we craft the user experiences that make language learning not just educational, but also delightfully engaging!
 
 🔗 [PhriniFluent Main Project](https://github.com/Flagro/PhriniFluent)

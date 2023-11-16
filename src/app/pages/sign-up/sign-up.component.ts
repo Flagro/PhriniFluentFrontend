@@ -26,7 +26,7 @@ export class SignUpComponent {
     this.authService.signup(this.name, this.surname, this.email, this.username, this.password).subscribe(
       data => {
         localStorage.setItem('auth_token', data.token);
-        this.router.navigate(['/login']); // Navigate to login or any other page
+        this.router.navigate(['/signup-success']); // Navigate to login or any other page
       },
       error => {
         console.error(error);

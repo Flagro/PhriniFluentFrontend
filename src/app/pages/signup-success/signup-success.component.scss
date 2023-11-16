@@ -1,0 +1,37 @@
+.auth-page {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 5px;
+
+    .success-message {
+        h1 {
+            font-size: 3rem; // Consistent with the signup page
+            margin-bottom: 30px;
+            color: #28a745; // A success green color
+        }
+
+        p {
+            font-size: 1.2rem;
+            a {
+                color: #007bff;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    // Media query for larger screens to match the Main page
+    @media (min-width: 1920px) {
+        h1 {
+            font-size: 2vw;
+        }
+
+        p {
+            font-size: 1.1vw;
+        }
+    }
+}

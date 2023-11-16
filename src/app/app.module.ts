@@ -15,6 +15,7 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
 import { PublicGroupComponent } from './pages/public-group/public-group.component';
 import { PrivateGroupComponent } from './pages/private-group/private-group.component';
+import { SignupSuccessComponent } from './pages/signup-success/signup-success.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PrivateGroupComponent } from './pages/private-group/private-group.compo
     SignUpComponent,
     LogInComponent,
     PublicGroupComponent,
-    PrivateGroupComponent
+    PrivateGroupComponent,
+    SignupSuccessComponent
   ],
   imports: [
     BrowserModule,

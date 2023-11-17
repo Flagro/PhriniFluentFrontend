@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'settings', component: UserSettingsComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LogInComponent },
   { path: 'signup', component: SignUpComponent },
-  { path: 'signup-successs', component: SignupSuccessComponent },
+  { path: 'signup-success', component: SignupSuccessComponent },
 ];
 
 @NgModule({

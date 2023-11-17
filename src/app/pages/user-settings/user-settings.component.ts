@@ -48,8 +48,7 @@ export class UserSettingsComponent {
   signOut() {
     // Implement the sign-out logic
     // Typically, this would clear any authentication tokens and redirect the user
-    console.log('Signing out user');
-    localStorage.removeItem('auth_token');
-    this.router.navigate(['/login']); // Replace with your login route
+    this.authService.logout();
+    this.router.navigate(['/login']); // Navigate to login page after logout
   }
 }

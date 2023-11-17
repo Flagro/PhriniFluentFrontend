@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
+import { tap } from 'rxjs/operators';
 
 export interface AuthResponse {
   token: string;
@@ -23,6 +24,10 @@ export class AuthService {
 
   login(username: string, password: string): Observable<AuthResponse> {
     return this.http.post<AuthResponse>(this.loginUrl, { username, password }).pipe(
+      tap((data: AuthResponse) => {
+        localStorage.setItem('auth_token', data.token);
+        this.setAuthState(true); // Update the auth state
+      }),
       catchError(this.handleError)
     );
   }

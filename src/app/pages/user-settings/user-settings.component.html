@@ -1,1 +1,23 @@
-<p>user-settings works!</p>
+<div class="auth-page">
+    <form (ngSubmit)="onSubmit()" class="auth-form">
+        <h1>User Settings</h1>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" [(ngModel)]="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" [(ngModel)]="surname" name="surname" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" [(ngModel)]="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" [(ngModel)]="username" name="username" required>
+        </div>
+        <button type="submit" class="save-btn">Save Settings</button>
+        <button type="button" class="signout-btn">Sign Out</button>
+    </form>
+</div>

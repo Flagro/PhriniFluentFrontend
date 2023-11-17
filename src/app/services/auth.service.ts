@@ -43,6 +43,10 @@ export class AuthService {
     return !!localStorage.getItem('auth_token');
   }
 
+  isLoggedIn(): boolean {
+    return this.hasToken();
+  }
+
   // Method to log out
   logout() {
     localStorage.removeItem('auth_token');

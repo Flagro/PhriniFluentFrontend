@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AuthGuard } from './guards/auth.guard';
+
 import { MainComponent } from './pages/main/main.component';
 import { WordGroupsComponent } from './pages/word-groups/word-groups.component';
 import { PublicGroupComponent } from './pages/public-group/public-group.component';
@@ -18,7 +20,7 @@ const routes: Routes = [
     { path: 'private/:groupId', component: PrivateGroupComponent }
   ]},
   { path: 'about', component: AboutComponent },
-  { path: 'settings', component: UserSettingsComponent },
+  { path: 'settings', component: UserSettingsComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LogInComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'signup-successs', component: SignupSuccessComponent },

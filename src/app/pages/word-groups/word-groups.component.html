@@ -10,6 +10,7 @@
         <div *ngFor="let group of privateWordGroups" class="word-group">
             <h3>{{ group.name }}</h3>
             <p>{{ getWordGroupDescription(group) }}</p>
+            <a [routerLink]="'/quiz/' + group.id">Start Quiz</a>
           </div>
       </div>
     </section>
@@ -20,6 +21,7 @@
         <div *ngFor="let group of publicWordGroups" class="word-group">
             <h3>{{ group.name }}</h3>
             <p>{{ getWordGroupDescription(group) }}</p>
+            <a [routerLink]="'/quiz/' + group.id">Start Quiz</a>
           </div>
       </section>
 </div>

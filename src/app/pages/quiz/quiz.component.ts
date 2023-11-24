@@ -20,17 +20,26 @@ export class QuizComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.loadNewWord();
+  }
+
+  loadNewWord(): void {
+    const groupId = this.getGroupId();
+    if (groupId !== null) {
+      this.fetchRandomWord(groupId);
+    }
+  }
+
+  getNewWord(): void {
+    this.loadNewWord();
+  }
+
+  getGroupId(): number | null {
     const groupIdParam = this.route.snapshot.paramMap.get('group_id');
     if (groupIdParam) {
-      const groupId = +groupIdParam;
-      this.fetchRandomWord(groupId);
-      // Fetch word group details as needed
+      return +groupIdParam;
     } else {
-      // Handle the case where groupId is null
-      // For example, redirecting to a 'not found' page or showing an error message
-      console.error('Group ID is missing');
-      // Redirect to home or another appropriate page
-      window.location.href = '/';
+      return null;
     }
   }
 

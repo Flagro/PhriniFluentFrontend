@@ -10,6 +10,8 @@
         <input type="text" id="userInput" [(ngModel)]="userInput" placeholder="Type your answer here">
     </div>
     <button (click)="checkAnswer()">Check Answer</button>
+    <!-- Button for getting a new word -->
+    <button class="green-button" (click)="getNewWord()">Get New Word</button>
 </div>
 
 <ng-template #loading>

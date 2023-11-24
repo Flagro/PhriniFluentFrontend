@@ -59,6 +59,13 @@
         }
     }
 
+    .green-button {
+        background-color: #28a745; /* Green color */
+        &:hover {
+            background-color: darken($color: #28a745, $amount: 10);
+        }
+    }
+
     @media (min-width: 1920px) {
         h2 {
             font-size: 2vw;

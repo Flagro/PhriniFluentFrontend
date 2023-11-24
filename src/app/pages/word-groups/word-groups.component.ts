@@ -21,12 +21,12 @@ export class WordGroupsComponent implements OnInit {
   }
 
   loadWordGroups() {
-    this.wordGroupService.getPublicWordGroups('en-us').subscribe(groups => {
+    this.wordGroupService.getPublicWordGroups('english').subscribe(groups => {
       this.publicWordGroups = groups;
     });
 
     if (this.isLoggedIn) {
-      this.wordGroupService.getPrivateWordGroups('en-us').subscribe(groups => {
+      this.wordGroupService.getPrivateWordGroups('english').subscribe(groups => {
         this.privateWordGroups = groups;
       });
     }

@@ -1,0 +1,62 @@
+.word-groups {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    text-align: left;
+  
+    section {
+      margin-bottom: 30px;
+  
+      h2 {
+        font-size: 2.5rem;
+        color: #333; // Choose a color that fits your design
+        margin-bottom: 20px;
+      }
+  
+      .word-group {
+        background: #f9f9f9; // Light background for each group
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+  
+        h3 {
+          font-size: 1.8rem;
+          color: #555; // Darker color for titles
+        }
+  
+        ul {
+          list-style-type: none;
+          padding: 0;
+  
+          li {
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd; // Border for each word
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  
+    a {
+      color: #007bff;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  
+    // Responsive styling for larger screens
+    @media (min-width: 1920px) {
+      h2 {
+        font-size: 1.8vw;
+      }
+  
+      h3 {
+        font-size: 1.4vw;
+      }
+    }
+}
+  

@@ -31,4 +31,10 @@ export class WordGroupsComponent implements OnInit {
       });
     }
   }
+
+  getWordGroupDescription(group: WordGroup): string {
+    const preferredLanguage = 'english'; // This can be dynamic based on user preference
+    const description = group.descriptions.find(desc => desc.language.language_name.toLowerCase() === preferredLanguage);
+    return description ? description.description_text : 'No description available in your preferred language';
+  }
 }

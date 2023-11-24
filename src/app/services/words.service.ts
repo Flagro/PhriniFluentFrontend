@@ -20,6 +20,15 @@ export class WordService {
       );
   }
 
+  checkWordSimilarity(wordId: number, text: string): Observable<any> {
+    const url = `${this.apiUrl}/words/${wordId}/similarity/`;
+    const body = { text: text };
+    return this.http.post(url, body)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.status === 403 || error.status === 404) {
       window.location.href = '/';

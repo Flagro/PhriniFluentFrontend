@@ -13,6 +13,7 @@ export class QuizComponent implements OnInit {
   word: Word | null = null;
   wordGroup: WordGroup | null = null;
   userInput: string = '';
+  responseMessage: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -50,7 +51,25 @@ export class QuizComponent implements OnInit {
   }
 
   checkAnswer(): void {
-    // Implement your logic to check the answer
-    console.log(this.userInput); // For now, just log the input
+    if (this.word && this.word.id) {
+      this.wordService.checkWordSimilarity(this.word.id, this.userInput)
+        .subscribe(response => {
+          this.updateResponseMessage(response.similarity);
+        });
+    }
+  }
+
+  private updateResponseMessage(similarityScore: number): void {
+    if (similarityScore == 100) {
+      this.responseMessage = 'Excelent! Correct answer.';
+    } else if (similarityScore >= 80) {
+      this.responseMessage = 'Great! Very close answer.';
+    } else if (similarityScore >= 50) {
+      this.responseMessage = 'Good, but there\'s room for improvement.';
+    } else if (similarityScore > 0) {
+      this.responseMessage = 'Not quite right, try again!';
+    } else {
+      this.responseMessage = 'No similarity. Please try a different answer.';
+    }
   }
 }

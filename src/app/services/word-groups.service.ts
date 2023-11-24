@@ -9,7 +9,7 @@ import { Word } from '../models/word.model';
   providedIn: 'root'
 })
 export class WordGroupService {
-  private apiUrl = environment.apiEndpoint;
+  private apiUrl = environment.apiEndpoint + '/phrini_fluent_words';
 
   constructor(private http: HttpClient) {}
 

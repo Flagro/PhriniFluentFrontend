@@ -12,8 +12,8 @@ import { WordGroup } from '../../models/word-group.model';
 export class QuizComponent implements OnInit {
   word: Word | null = null;
   wordGroup: WordGroup | null = null;
-  userInput: string = '';
-  responseMessage: string = '';
+  userInput = '';
+  responseMessage = '';
 
   constructor(
     private route: ActivatedRoute,

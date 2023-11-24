@@ -1,16 +1,4 @@
 <div class="word-groups">
-    <!-- Public Word Groups -->
-    <section class="public-word-groups">
-      <h2>Public Word Groups</h2>
-      <div *ngFor="let group of publicWordGroups" class="word-group">
-        <h3>{{ group.name }}</h3>
-        <!-- Add more properties as needed -->
-        <ul>
-          <li *ngFor="let word of group.words">{{ word.text }}</li>
-        </ul>
-      </div>
-    </section>
-  
     <!-- Private Word Groups -->
     <section class="private-word-groups">
       <h2>Private Word Groups</h2>
@@ -28,4 +16,16 @@
         </div>
       </div>
     </section>
+
+    <!-- Public Word Groups -->
+    <section class="public-word-groups">
+        <h2>Public Word Groups</h2>
+        <div *ngFor="let group of publicWordGroups" class="word-group">
+          <h3>{{ group.name }}</h3>
+          <!-- Add more properties as needed -->
+          <ul>
+            <li *ngFor="let word of group.words">{{ word.text }}</li>
+          </ul>
+        </div>
+      </section>
 </div>

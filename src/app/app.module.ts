@@ -16,6 +16,7 @@ import { LogInComponent } from './pages/log-in/log-in.component';
 import { PublicGroupComponent } from './pages/public-group/public-group.component';
 import { PrivateGroupComponent } from './pages/private-group/private-group.component';
 import { SignupSuccessComponent } from './pages/signup-success/signup-success.component';
+import { QuizComponent } from './pages/quiz/quiz.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SignupSuccessComponent } from './pages/signup-success/signup-success.co
     LogInComponent,
     PublicGroupComponent,
     PrivateGroupComponent,
-    SignupSuccessComponent
+    SignupSuccessComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,

@@ -13,8 +13,6 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
-import { PublicGroupComponent } from './pages/public-group/public-group.component';
-import { PrivateGroupComponent } from './pages/private-group/private-group.component';
 import { SignupSuccessComponent } from './pages/signup-success/signup-success.component';
 import { QuizComponent } from './pages/quiz/quiz.component';
 
@@ -29,8 +27,6 @@ import { QuizComponent } from './pages/quiz/quiz.component';
     FooterComponent,
     SignUpComponent,
     LogInComponent,
-    PublicGroupComponent,
-    PrivateGroupComponent,
     SignupSuccessComponent,
     QuizComponent
   ],

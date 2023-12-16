@@ -4,8 +4,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './log-in.component.html',
-  styleUrls: ['./log-in.component.scss']
+  templateUrl: './log-in.component.html'
 })
 export class LogInComponent {
   username = '';

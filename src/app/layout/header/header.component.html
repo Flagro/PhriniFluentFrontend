@@ -1,21 +1,23 @@
-<header class="site-header">
-    <div class="header-content">
-        <a routerLink="/" class="logo-and-title">
-            <img src="assets/logo.png" alt="Logo" class="logo">
-            <div class="project-name">PHRINIFLUENT</div>
-        </a>
-        <nav class="navigation">
-            <ul>
-                <li><a routerLink="/groups">Words</a></li>
-                <li><a routerLink="/about">About Us</a></li>
-                <!-- This link will change based on authentication state -->
-                <li *ngIf="!isLoggedIn; else loggedInTemplate">
-                  <a routerLink="/login">Log In</a>
-                </li>
-                <ng-template #loggedInTemplate>
-                  <li><a routerLink="/settings">Settings</a></li>
-                </ng-template>
-            </ul>
-        </nav>
-    </div>
-</header>
+<div>
+    <header class="site-header shadow-md py-2.5">
+        <div class="header-content flex items-center justify-between mx-auto max-w-6xl px-4">
+            <a routerLink="/" class="logo-and-title flex items-center no-underline">
+                <img src="assets/logo.png" alt="Logo" class="logo rounded-full w-20 h-20 object-cover object-center mr-4">
+                <div class="project-name text-4xl font-bold">PHRINIFLUENT</div>
+            </a>
+            <nav class="navigation">
+                <ul class="list-none p-0 flex gap-5">
+                    <li><a routerLink="/groups" class="no-underline text-lg font-bold">Words</a></li>
+                    <li><a routerLink="/about" class="no-underline text-lg font-bold">About Us</a></li>
+                    <!-- This link will change based on authentication state -->
+                    <li *ngIf="!isLoggedIn; else loggedInTemplate">
+                    <a routerLink="/login" class="no-underline text-lg font-bold">Log In</a>
+                    </li>
+                    <ng-template #loggedInTemplate>
+                    <li><a routerLink="/settings" class="no-underline text-lg">Settings</a></li>
+                    </ng-template>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</div>

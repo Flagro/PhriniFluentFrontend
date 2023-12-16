@@ -8,7 +8,7 @@
             </div>
             <div *ngIf="isLoggedIn">
                 <div *ngIf="privateWordGroups.length === 0">
-                    <p class="mb-20">You have no private word groups.</p>
+                    <p class="text-center mb-20">You have no private word groups.</p>
                 </div>
                 <div *ngFor="let group of privateWordGroups" class="word-group">
                     <div class="bg-green-300 dark:bg-green-600 shadow-lg rounded-lg p-4">
@@ -25,6 +25,9 @@
         <!-- Public Word Groups -->
         <section class="public-word-groups">
             <h2 class="text-center mb-4">Public Word Groups</h2>
+            <div *ngIf="publicWordGroups.length === 0">
+                <p class="text-center mb-20">Oops! Looks like our server is down.</p>
+            </div>
             <div *ngFor="let group of publicWordGroups" class="word-group">
                 <div class="bg-green-300 dark:bg-green-600 shadow-lg rounded-lg p-4 mb-10">
                     <h2>{{ group.name }}</h2>

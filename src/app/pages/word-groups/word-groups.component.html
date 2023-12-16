@@ -1,27 +1,39 @@
-<div class="word-groups">
-    <!-- Private Word Groups -->
-    <section class="private-word-groups">
-      <h2>Private Word Groups</h2>
-      <div *ngIf="!isLoggedIn">
-        <p>Please <a routerLink="/login">log in</a> to view your private word groups.</p>
-      </div>
-      <div *ngIf="isLoggedIn">
-        <div *ngIf="privateWordGroups.length === 0">You have no private word groups.</div>
-        <div *ngFor="let group of privateWordGroups" class="word-group">
-            <h3>{{ group.name }}</h3>
-            <p>{{ getWordGroupDescription(group) }}</p>
-            <a [routerLink]="'/quiz/' + group.id">Start Quiz</a>
-          </div>
-      </div>
-    </section>
+<div class="flex justify-center items-center min-h-screen">
+    <div class="max-w-2xl w-full mx-auto p-6">
+        <!-- Private Word Groups -->
+        <section class="private-word-groups mb-20">
+            <h2 class="text-center mb-4">Private Word Groups</h2>
+            <div *ngIf="!isLoggedIn">
+                <p>Please <a routerLink="/login">log in</a> to view your private word groups.</p>
+            </div>
+            <div *ngIf="isLoggedIn">
+                <div *ngIf="privateWordGroups.length === 0">
+                    <p class="mb-20">You have no private word groups.</p>
+                </div>
+                <div *ngFor="let group of privateWordGroups" class="word-group">
+                    <div class="bg-green-300 dark:bg-green-600 shadow-lg rounded-lg p-4">
+                        <h2>{{ group.name }}</h2>
+                        <p>{{ getWordGroupDescription(group) }}</p>
+                        <button [routerLink]="'/quiz/' + group.id" class="blue-button">
+                            Start Quiz!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Public Word Groups -->
-    <section class="public-word-groups">
-        <h2>Public Word Groups</h2>
-        <div *ngFor="let group of publicWordGroups" class="word-group">
-            <h3>{{ group.name }}</h3>
-            <p>{{ getWordGroupDescription(group) }}</p>
-            <a [routerLink]="'/quiz/' + group.id">Start Quiz</a>
-          </div>
-      </section>
+        <!-- Public Word Groups -->
+        <section class="public-word-groups">
+            <h2 class="text-center mb-4">Public Word Groups</h2>
+            <div *ngFor="let group of publicWordGroups" class="word-group">
+                <div class="bg-green-300 dark:bg-green-600 shadow-lg rounded-lg p-4 mb-10">
+                    <h2>{{ group.name }}</h2>
+                    <p>{{ getWordGroupDescription(group) }}</p>
+                    <button [routerLink]="'/quiz/' + group.id" class="blue-button">
+                        Start Quiz!
+                    </button>
+                </div>
+              </div>
+          </section>
+      </div>
 </div>

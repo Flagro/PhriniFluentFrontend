@@ -5,8 +5,7 @@ import { WordGroup } from '../../models/word-group.model';
 
 @Component({
   selector: 'app-word-groups',
-  templateUrl: './word-groups.component.html',
-  styleUrls: ['./word-groups.component.scss']
+  templateUrl: './word-groups.component.html'
 })
 export class WordGroupsComponent implements OnInit {
   publicWordGroups: WordGroup[] = [];

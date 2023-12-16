@@ -1,20 +1,27 @@
 <div>
-    <header class="site-header shadow-md py-2.5">
+    <header class="site-header shadow-md py-2.5 relative">
         <div class="header-content flex items-center justify-between mx-auto max-w-6xl px-4">
             <a routerLink="/" class="logo-and-title flex items-center no-underline">
                 <img src="assets/logo.png" alt="Logo" class="logo rounded-full w-20 h-20 object-cover object-center mr-4">
                 <div class="project-name text-4xl font-bold">PHRINIFLUENT</div>
             </a>
-            <nav class="navigation">
-                <ul class="list-none p-0 flex gap-5">
-                    <li><a routerLink="/groups" class="no-underline text-lg font-bold">Words</a></li>
-                    <li><a routerLink="/about" class="no-underline text-lg font-bold">About Us</a></li>
-                    <!-- This link will change based on authentication state -->
+
+            <!-- Hamburger Icon -->
+            <button (click)="isMenuOpen = !isMenuOpen" class="text-4xl md:hidden z-20">
+                <a class="font-bold">&equiv;</a>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav [ngClass]="{'flex': isMenuOpen, 'hidden': !isMenuOpen}" class="navigation absolute inset-x-0 top-full mt-2 p-4 bg-white dark:bg-gray-800 z-10 flex-col items-center md:static md:flex md:flex-row md:mt-0 md:p-0 md:bg-transparent">
+                <ul class="list-none w-full flex flex-col md:flex-row gap-5 md:gap-8 items-center">
+                    <li><a routerLink="/groups" class="no-underline text-xl font-bold">Words</a></li>
+                    <li><a routerLink="/about" class="no-underline text-xl font-bold">About Us</a></li>
+                    <!-- Authentication Links -->
                     <li *ngIf="!isLoggedIn; else loggedInTemplate">
-                    <a routerLink="/login" class="no-underline text-lg font-bold">Log In</a>
+                        <a routerLink="/login" class="no-underline text-xl font-bold">Log In</a>
                     </li>
                     <ng-template #loggedInTemplate>
-                    <li><a routerLink="/settings" class="no-underline text-lg">Settings</a></li>
+                        <li><a routerLink="/settings" class="no-underline text-xl font-bold">Settings</a></li>
                     </ng-template>
                 </ul>
             </nav>

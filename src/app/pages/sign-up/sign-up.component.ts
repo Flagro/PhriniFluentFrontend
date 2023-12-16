@@ -4,8 +4,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
-  templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.scss']
+  templateUrl: './sign-up.component.html'
 })
 export class SignUpComponent {
   name = '';

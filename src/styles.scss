@@ -3,13 +3,24 @@
 @tailwind utilities;
 
 a {
-    @apply text-blue-500;
-}
-
-a:hover {
-    @apply text-blue-700;
+    @apply text-blue-500 hover:text-blue-700;
 }
 
 .green-button {
-    @apply bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded;
+    @apply bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4;
+}
+
+@layer base {
+    p {
+        @apply text-lg md:text-2xl mb-3 md:mb-5;
+    }
+    h1 {
+      @apply text-2xl md:text-4xl mb-4 md:mb-7 font-bold;
+    }
+    h2 {
+      @apply text-xl md:text-2xl mb-4 md:mb-7;
+    }
+    h3 {
+      @apply text-base md:text-lg mb-4 md:mb-7;
+    }
 }

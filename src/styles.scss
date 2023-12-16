@@ -7,10 +7,20 @@ a {
 }
 
 .green-button {
-    @apply bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4;
+    @apply bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+}
+
+.blue-button {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4;
 }
 
 @layer base {
+    label {
+        @apply text-lg md:text-2xl mb-3 md:mb-5 text-gray-700 dark:text-gray-300;
+    }
+    input {
+        @apply appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10
+    }
     p {
         @apply text-lg md:text-2xl mb-3 md:mb-5 text-gray-900 dark:text-gray-300;
     }

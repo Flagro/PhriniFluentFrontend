@@ -7,21 +7,21 @@
             </a>
 
             <!-- Hamburger Icon -->
-            <button (click)="isMenuOpen = !isMenuOpen" class="text-3xl md:hidden z-20">
+            <button (click)="isMenuOpen = !isMenuOpen" class="text-4xl md:hidden z-20">
                 <a class="font-bold">&equiv;</a>
             </button>
 
             <!-- Navigation Links -->
             <nav [ngClass]="{'flex': isMenuOpen, 'hidden': !isMenuOpen}" class="navigation absolute inset-x-0 top-full mt-2 p-4 bg-white dark:bg-gray-800 z-10 flex-col items-center md:static md:flex md:flex-row md:mt-0 md:p-0 md:bg-transparent">
                 <ul class="list-none w-full flex flex-col md:flex-row gap-5 md:gap-8 items-center">
-                    <li><a routerLink="/groups" class="no-underline text-lg font-bold">Words</a></li>
-                    <li><a routerLink="/about" class="no-underline text-lg font-bold">About Us</a></li>
+                    <li><a routerLink="/groups" class="no-underline text-xl font-bold">Words</a></li>
+                    <li><a routerLink="/about" class="no-underline text-xl font-bold">About Us</a></li>
                     <!-- Authentication Links -->
                     <li *ngIf="!isLoggedIn; else loggedInTemplate">
-                        <a routerLink="/login" class="no-underline text-lg font-bold">Log In</a>
+                        <a routerLink="/login" class="no-underline text-xl font-bold">Log In</a>
                     </li>
                     <ng-template #loggedInTemplate>
-                        <li><a routerLink="/settings" class="no-underline text-lg">Settings</a></li>
+                        <li><a routerLink="/settings" class="no-underline text-xl font-bold">Settings</a></li>
                     </ng-template>
                 </ul>
             </nav>

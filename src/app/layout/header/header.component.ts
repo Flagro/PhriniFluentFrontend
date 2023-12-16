@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
+  isMenuOpen = false;
   isLoggedIn = false;
 
   constructor(private authService: AuthService, private router: Router) {

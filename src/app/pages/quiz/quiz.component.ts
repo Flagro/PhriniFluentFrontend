@@ -6,8 +6,7 @@ import { WordGroup } from '../../models/word-group.model';
 
 @Component({
   selector: 'app-quiz',
-  templateUrl: './quiz.component.html',
-  styleUrls: ['./quiz.component.scss']
+  templateUrl: './quiz.component.html'
 })
 export class QuizComponent implements OnInit {
   word: Word | null = null;

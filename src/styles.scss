@@ -20,22 +20,22 @@ a {
 
 @layer base {
     label {
-        @apply text-2xl mb-3 md:mb-5 text-gray-700 dark:text-gray-300;
+        @apply text-lg md:text-2xl mb-3 md:mb-5 text-gray-700 dark:text-gray-300;
     }
     input {
         @apply appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10
     }
     p {
-        @apply text-2xl mb-3 md:mb-5 text-gray-900 dark:text-gray-300;
+        @apply text-lg md:text-2xl mb-3 md:mb-5 text-gray-900 dark:text-gray-300;
     }
     h1 {
-        @apply text-7xl mb-5 md:mb-20 font-bold text-gray-900 dark:text-gray-300;
+        @apply text-4xl md:text-7xl mb-5 md:mb-20 font-bold text-gray-900 dark:text-gray-300;
     }
     h2 {
-        @apply text-5xl mb-4 md:mb-7 text-gray-900 dark:text-gray-300;
+        @apply text-3xl md:text-5xl mb-4 md:mb-7 text-gray-900 dark:text-gray-300;
     }
     h3 {
-        @apply text-lg mb-4 md:mb-7 text-gray-900 dark:text-gray-300;
+        @apply text-lg md:text-xl mb-4 md:mb-7 text-gray-900 dark:text-gray-300;
     }
     div {
         @apply bg-white dark:bg-gray-800;

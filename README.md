@@ -1,5 +1,11 @@
 # 🌐 PhriniFluent Frontend
 
+> [!NOTE]
+> **No longer live.** PhriniFluent was rebuilt in October 2026 and now runs at
+> https://fluent.phriniverse.com (https://phrinifluent.com redirects there; the
+> api.phrinifluent.com API is retired). This repository is no longer maintained and
+> stays as a reference implementation of the original Angular frontend.
+
 ![PhriniFluent Logo](logo.png)
 
 🚀 Welcome to the *frontend repository* of **PhriniFluent** - the vibrant face of our open-source language learning platform. Here, we craft the user experiences that make language learning not just educational, but also delightfully engaging!
